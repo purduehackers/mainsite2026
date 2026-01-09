@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <g transform="matrix(0.181159,0,0,0.181159,-60.144928,-50)">
+        <path d="M516,644L516,276L700,276L700,460L884,460L884,828L700,828L700,644L516,644ZM516,644L516,828L332,828L332,644L516,644Z"/>
+    </g>
+    <style>
+        path { fill: #000; }
+        @media (prefers-color-scheme: dark) {
+            path { fill: #FFF; }
+        }
+    </style>
+</svg>
