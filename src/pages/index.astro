@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 import glider from "../assets/glider.svg";
 ---
 
-<html lang="en">
+<html lang="en" class="text-xl leading-normal overflow-x-hidden">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,10 +13,11 @@ import glider from "../assets/glider.svg";
         <meta name="generator" content={Astro.generator} />
         <title>Purdue Hackers</title>
     </head>
-    <body class="font-sans">
-        <header
-            class="relative pt-20 pb-12 text-black mb-8 max-w-[800px] mx-auto px-4"
-        >
+    <body class="font-sans text-white bg-bg">
+        <header class="bg-amber-400 mb-8">
+            <div
+                class="pt-20 pb-12 text-black max-w-3xl mx-auto px-4"
+            >
             <div
                 class="flex flex-wrap items-center max-md:flex-col-reverse max-md:items-start"
             >
@@ -27,11 +28,12 @@ import glider from "../assets/glider.svg";
                 <Image
                     src={glider}
                     alt="Our logo, a glider from Conway's Game of Life"
-                    class="w-[100px] h-[100px] brightness-0 max-md:w-[60px] max-md:h-[60px] max-md:mb-4"
+                    class="size-24 brightness-0 max-md:size-16 max-md:mb-4"
                 />
             </div>
+            </div>
         </header>
-        <main class="max-w-[800px] mx-auto px-4 pb-6 md:pb-0">
+        <main class="max-w-3xl mx-auto px-4 pb-6 md:pb-0">
             <h2 class="text-3xl font-bold my-2">For students</h2>
             <ul class="list-disc list-inside">
                 <li>
