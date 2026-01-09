@@ -4,8 +4,19 @@ interface Props {
 }
 
 const { href } = Astro.props;
+
+if (!Astro.site) {
+    throw new Error("'site' property must be set in Astro config (astro.config.mjs)");
+}
+const url = new URL(href, Astro.url.href);
+const isExternal = !(url.hostname === Astro.site.hostname || url.hostname.endsWith('.' + Astro.site.hostname));
 ---
 
-<a href={href} target="_blank" rel="noopener noreferrer" class="underline text-link hover:text-amber-400 focus-visible:text-amber-400">
+<a
+    href={href}
+    target="_blank"
+    rel={isExternal ? "noopener noreferrer" : undefined}
+    class="underline text-link hover:text-amber-400 focus-visible:text-amber-400"
+>
     <slot />
 </a>
