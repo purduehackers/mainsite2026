@@ -1,0 +1,90 @@
+---
+import "../styles/global.css";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import glider from "../assets/glider.svg";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Purdue Hackers</title>
+    </head>
+    <body class="font-sans">
+        <header
+            class="relative pt-20 pb-12 text-black mb-8 max-w-[800px] mx-auto px-4"
+        >
+            <div
+                class="flex flex-wrap items-center max-md:flex-col-reverse max-md:items-start"
+            >
+                <h1 class="flex-1 text-5xl font-bold leading-tight">
+                    Purdue <br class="hidden max-md:inline" />Hackers
+                </h1>
+
+                <Image
+                    src={glider}
+                    alt="Our logo, a glider from Conway's Game of Life"
+                    class="w-[100px] h-[100px] brightness-0 max-md:w-[60px] max-md:h-[60px] max-md:mb-4"
+                />
+            </div>
+        </header>
+        <main class="max-w-[800px] mx-auto px-4 pb-6 md:pb-0">
+            <h2 class="text-3xl font-bold my-2">For students</h2>
+            <ul>
+                <li>
+                    <Link href="https://puhack.horse/discord-site-refer">
+                        Join us
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://grants.purduehackers.com">
+                        Microgrants
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://events.purduehackers.com">
+                        Events
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://passports.purduehackers.com">
+                        Passports
+                    </Link>
+                </li>
+            </ul>
+            <h2 class="text-3xl font-bold my-2">For visitors</h2>
+            <ul>
+                <li>
+                    <Link href="https://blog.purduehackers.com"> Blog </Link>
+                </li>
+                <li>
+                    <Link href="https://www.purduehackers.com/sponsor">
+                        Sponsor us
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://ring.purduehackers.com">
+                        Web Ring
+                    </Link>
+                </li>
+            </ul>
+
+            <h2 class="text-3xl font-bold my-2">Shows</h2>
+            <ul>
+                <li>
+                    <Link href="https://spill.purduehackers.com">
+                        Spill (2025)
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://burst.purduehackers.com">
+                        Burst (2024)
+                    </Link>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>
