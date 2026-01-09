@@ -7,79 +7,96 @@ import { SEO } from "astro-seo";
 ---
 
 <html lang="en" class="text-xl leading-normal overflow-x-hidden">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Purdue Hackers</title>
-		{/* TODO: Add OpenGraph & Twitter card images */}
-		<SEO
-			title="Purdue Hackers"
-			description="A community of students who collaborate, learn, and build kick-ass technical projects 💛⚡️"
-		/>
-	</head>
-	<body class="font-sans text-white bg-bg pb-10">
-		<header class="bg-amber-400 mb-8">
-			<div class="pt-20 pb-12 text-black max-w-3xl mx-auto px-4">
-				<div class="flex flex-wrap items-center max-md:flex-col-reverse max-md:items-start">
-					<h1 class="flex-1 text-5xl font-bold leading-tight">
-						Purdue <br class="hidden max-md:inline" />Hackers
-					</h1>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="darkreader-lock" />
+        <title>Purdue Hackers</title>
+        {/* TODO: Add OpenGraph & Twitter card images */}
+        <SEO
+            title="Purdue Hackers"
+            description="A community of students who collaborate, learn, and build kick-ass technical projects 💛⚡️"
+        />
+    </head>
+    <body class="font-sans text-white bg-bg pb-10">
+        <header class="bg-amber-400 mb-8">
+            <div class="pt-20 pb-12 text-black max-w-3xl mx-auto px-4">
+                <div
+                    class="flex flex-wrap items-center max-md:flex-col-reverse max-md:items-start"
+                >
+                    <h1 class="flex-1 text-5xl font-bold leading-tight">
+                        Purdue <br class="hidden max-md:inline" />Hackers
+                    </h1>
 
-					<Image
-						src={glider}
-						alt="Our logo, a glider from Conway's Game of Life"
-						class="size-24 brightness-0 max-md:size-16 max-md:mb-4"
-					/>
-				</div>
-			</div>
-		</header>
-		<main class="max-w-3xl mx-auto px-4 pb-6 md:pb-0">
-			<h2 class="text-3xl font-bold mt-4 mb-2">For students</h2>
-			<ul class="list-disc list-inside">
-				<li>
-					<Link href="https://puhack.horse/discord-site-refer"> Join us! </Link>
-				</li>
-				<li>
-					<Link href="https://grants.purduehackers.com"> Microgrants </Link>
-				</li>
-				<li>
-					<Link href="https://events.purduehackers.com"> Events </Link>
-				</li>
-				<li>
-					<Link href="https://passports.purduehackers.com"> Passports </Link>
-				</li>
-			</ul>
-			<h2 class="text-3xl font-bold mt-4 mb-2">For everyone</h2>
-			<ul class="list-disc list-inside">
-				<li>
-					<Link href="https://blog.purduehackers.com"> Blog </Link>
-				</li>
-				<li>
-					<Link href="https://ring.purduehackers.com"> Web Ring </Link>
-				</li>
-				<li>
-					<Link href="https://commit.purduehackers.com">
-						Commit Overflow 2025, our seasonal event
-					</Link>
-				</li>
-				<li>
-					<Link href="https://sig.horse">
-						SIGHORSE, our version of SIGBOVIK
-					</Link>
-				</li>
-			</ul>
+                    <Image
+                        src={glider}
+                        alt="Our logo, a glider from Conway's Game of Life"
+                        class="size-24 brightness-0 max-md:size-16 max-md:mb-4"
+                    />
+                </div>
+            </div>
+        </header>
+        <main class="max-w-3xl mx-auto px-4 pb-6 md:pb-0">
+            <h2 class="text-3xl font-bold mt-4 mb-2">For students</h2>
+            <ul class="list-disc list-inside">
+                <li>
+                    <Link href="https://puhack.horse/discord-site-refer">
+                        Join us!
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://grants.purduehackers.com">
+                        Microgrants
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://events.purduehackers.com">
+                        Events
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://passports.purduehackers.com">
+                        Passports
+                    </Link>
+                </li>
+            </ul>
+            <h2 class="text-3xl font-bold mt-4 mb-2">For everyone</h2>
+            <ul class="list-disc list-inside">
+                <li>
+                    <Link href="https://blog.purduehackers.com"> Blog </Link>
+                </li>
+                <li>
+                    <Link href="https://ring.purduehackers.com">
+                        Web Ring
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://commit.purduehackers.com">
+                        Commit Overflow 2025, our seasonal event
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://sig.horse">
+                        SIGHORSE, our version of SIGBOVIK
+                    </Link>
+                </li>
+            </ul>
 
-			<h2 class="text-3xl font-bold mt-4 mb-2">Shows</h2>
-			<ul class="list-disc list-inside">
-				<li>
-					<Link href="https://spill.purduehackers.com"> Spill (2025) </Link>
-				</li>
-				<li>
-					<Link href="https://burst.purduehackers.com"> Burst (2024) </Link>
-				</li>
-			</ul>
-		</main>
-	</body>
+            <h2 class="text-3xl font-bold mt-4 mb-2">Shows</h2>
+            <ul class="list-disc list-inside">
+                <li>
+                    <Link href="https://spill.purduehackers.com">
+                        Spill (2025)
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://burst.purduehackers.com">
+                        Burst (2024)
+                    </Link>
+                </li>
+            </ul>
+        </main>
+    </body>
 </html>
