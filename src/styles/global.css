@@ -1,9 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
 @import "tailwindcss";
 
+@font-face {
+    font-family: "ABC Whyte Edu";
+    src: url("../assets/ABCWhyteEdu-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme {
-    --font-sans: "Space Grotesk", sans-serif;
+    --font-display: "Silkscreen", monospace;
+    --font-sans: "ABC Whyte Edu", sans-serif;
+    --font-body: "ABC Whyte Edu", sans-serif;
     --color-amber-400: rgb(251, 191, 36);
     --color-bg: #111118;
     --color-link: #00eeee;
+}
+
+body {
+    font-family: var(--font-body);
 }
