@@ -1,9 +1,10 @@
 ---
-import "../styles/global.css";
-import Link from "../components/Link.astro";
+import "@/styles/global.css";
+import Link from "@/components/Link.astro";
 import { Image } from "astro:assets";
-import glider from "../assets/glider.svg";
+import glider from "@/assets/glider.svg";
 import { SEO } from "astro-seo";
+import UmamiTracker from "@/components/UmamiTracker.astro";
 ---
 
 <html lang="en" class="text-xl leading-normal overflow-x-hidden">
@@ -19,6 +20,7 @@ import { SEO } from "astro-seo";
             title="Purdue Hackers"
             description="A community of students who collaborate, learn, and build kick-ass technical projects 💛⚡️"
         />
+        <UmamiTracker />
     </head>
     <body class="font-sans text-white bg-bg pb-10">
         <header class="bg-amber-400 mb-8 font-display">
