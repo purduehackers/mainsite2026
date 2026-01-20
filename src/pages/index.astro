@@ -5,6 +5,8 @@ import { Image } from "astro:assets";
 import glider from "@/assets/glider.svg";
 import { SEO } from "astro-seo";
 import UmamiTracker from "@/components/UmamiTracker.astro";
+
+const galleryImages = await Astro.glob("@/assets/gallery/*.{jpg,png,jpeg}");
 ---
 
 <html lang="en" class="text-xl leading-normal overflow-x-hidden">
@@ -22,7 +24,7 @@ import UmamiTracker from "@/components/UmamiTracker.astro";
         />
         <UmamiTracker />
     </head>
-    <body class="font-sans text-white bg-bg pb-10">
+    <body class="font-sans text-white bg-bg">
         <header class="bg-amber-400 mb-8 font-display">
             <div class="pt-20 pb-14 text-black w-full md:max-w-3xl mx-auto px-4">
                 <div
@@ -120,5 +122,23 @@ import UmamiTracker from "@/components/UmamiTracker.astro";
                 </li>
             </ul>
         </main>
+        <div class="w-full overflow-hidden mt-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-0">
+                {
+                    galleryImages.map((imageModule) => (
+                        <div class="w-full h-full">
+                            <Image
+                                src={imageModule.default}
+                                alt="Purdue Hackers community"
+                                width={800}
+                                height={600}
+                                class="w-full h-full object-cover block pointer-events-none select-none"
+                                loading="lazy"
+                            />
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
     </body>
 </html>
