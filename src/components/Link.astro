@@ -16,7 +16,7 @@ const isExternal = !(url.hostname === Astro.site.hostname || url.hostname.endsWi
     href={href}
     target="_blank"
     rel={isExternal ? "noopener noreferrer" : undefined}
-    class="underline text-link hover:text-amber-400 focus-visible:text-amber-400"
+    class="underline text-[#C9A0DC] hover:text-amber-400 focus-visible:text-amber-400"
 >
     <slot />
 </a>
