@@ -6,7 +6,8 @@ import glider from "@/assets/glider.svg";
 import { SEO } from "astro-seo";
 import UmamiTracker from "@/components/UmamiTracker.astro";
 
-const galleryImages = await Astro.glob("@/assets/gallery/*.{jpg,png,jpeg}");
+const galleryModules = import.meta.glob<ImageMetadata>("@/assets/gallery/*.{jpg,png,jpeg}", { eager: true, import: 'default' });
+const galleryImages = Object.values(galleryModules);
 ---
 
 <html lang="en" class="text-xl leading-normal overflow-x-hidden">
@@ -125,10 +126,10 @@ const galleryImages = await Astro.glob("@/assets/gallery/*.{jpg,png,jpeg}");
         <div class="w-full overflow-hidden mt-12">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-0">
                 {
-                    galleryImages.map((imageModule) => (
+                    galleryImages.map((image) => (
                         <div class="w-full h-full">
                             <Image
-                                src={imageModule.default}
+                                src={image}
                                 alt="Purdue Hackers community"
                                 width={800}
                                 height={600}
